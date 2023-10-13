@@ -9,7 +9,7 @@ resource "aws_key_pair" "key_pair" {
 }
 
 resource "local_file" "key_file" {
-  filename        = "/Users/divyak/DevOps/Terraform/AmazonLinux2023/${aws_key_pair.key_pair.key_name}.pem"
+  filename        = "/path/to/terraform/folder/${aws_key_pair.key_pair.key_name}.pem"
   content         = tls_private_key.rsa-4096-key.private_key_pem
   file_permission = "0400"
 }
